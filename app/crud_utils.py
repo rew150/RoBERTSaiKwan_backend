@@ -7,8 +7,8 @@ def get_all_names(db: Session, skip: int = 0, limit: int = 10):
 def get_news_by_name(db: Session, name: str):
     return db.query(models.News).filter(models.News.name == name).first()
 
-def create_news(db: Session, news: schemas.News):
-    db_news = models.News(**news.dict())
+def create_news(db: Session, news: schemas.CreateNews, predicted: str):
+    db_news = models.News(**news.dict(), summary=predicted)
     db.add(db_news)
     db.commit()
     db.refresh(db_news)

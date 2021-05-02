@@ -9,3 +9,7 @@ class News(BaseNews):
 
     class Config:
         orm_mode = True
+
+class CreateNews(BaseNews):
+    name: str
+    textbody: str
