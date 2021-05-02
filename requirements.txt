@@ -3,3 +3,15 @@ uvicorn[standard]
 aiofiles
 sqlalchemy
 pydantic
+python-dotenv
+
+torch
+datasets
+pythainlp==2.2.4
+transformers==4.4.0
+sentencepiece
+# tensorflow==2.4.0
+# tensorflow_text
+# emoji
+# seqeval
+# fuzzywuzzy
