@@ -62,4 +62,5 @@ def create_news(news: schemas.CreateNews, db: Session = Depends(get_db)):
     predicted = predict(news.textbody)
     return crud_utils.create_news(db, news=news, predicted=predicted)
 
+app.mount("/admin", StaticFiles(directory='public', html=True), name="static")
 app.mount("/", StaticFiles(directory='public', html=True), name="static")
