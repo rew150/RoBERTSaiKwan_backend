@@ -38,7 +38,7 @@ def post_process(data, raw_predictions, tokenizer, n_best_size = 20, max_answer_
           valid_answers.append(
               {
                   "score": start_logits[start_index] + end_logits[end_index],
-                  "text": tokenizer.decode(example['input_ids'][start_index:end_index], skip_special_tokens=True)
+                  "text": tokenizer.decode(example['input_ids'][start_index:end_index+1], skip_special_tokens=True)
               }
           )
     if len(valid_answers) > 0:
