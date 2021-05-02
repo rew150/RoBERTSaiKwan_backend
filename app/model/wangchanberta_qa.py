@@ -58,4 +58,6 @@ def predict(texts):
   dataset = load_dataset('json', data_files='text.json')
   raw_predictions = trainer.predict(dataset['train'])
   predictions = post_process(dataset['train'], raw_predictions[0], tokenizer)
+  if ',' in predictions[0][:10]:
+    return ''.join(predictions[0].split(',')[1:])
   return predictions[0]
