@@ -1,4 +1,7 @@
 .vscode/
 .python-version
 __pycache__/
-public/
+public/*
+!public/README.md
+data/*
+!data/README.md
