@@ -16,6 +16,10 @@ make install
 ```
 to install all packages.
 
+## Environment
+
+All environment variables are listed in `.env` file.
+
 ## Deployment
 
 Running command are listed in `Makefile`. Please refer to it for running information ex.`make run`
