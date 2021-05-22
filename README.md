@@ -29,4 +29,4 @@ We opened CORS on `localhost:3000` (react development server). Please refer to `
 The model(s) are in `app/model/{model_name}.py`. These are taken from [this repo]. Currently, there is only 1 model and an interface was not written to be model-independent.
 
 
-[this repo]: https://www.google.com
+[this repo]: https://github.com/Sav-eng/roBERTsaikwan-model
